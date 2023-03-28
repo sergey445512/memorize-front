@@ -1,0 +1,156 @@
+@import "../../index.module.scss";
+
+.card {
+  transition: 0.5s;
+  position: relative;
+  transition: 0.5s;
+  max-width: 380px;
+  width: 100%;
+  min-height: 380px;
+  perspective: 1000px;
+  background: inherit;
+  box-shadow: none;
+  word-wrap: break-word;
+
+  input {
+    font-size: 24px;
+    border: none;
+    border-radius: 0 0 15px 15px;
+
+    border: 2px solid white;
+    color: $primary-color;
+    padding: 10px;
+  }
+
+  input:hover {
+    outline: none;
+    border: 2px solid $primary-color;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid $primary-color;
+  }
+
+  .answerInput {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $white-color;
+    box-shadow: none;
+    transition: 0.8s;
+  }
+
+  .front,
+  .back {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+    backface-visibility: hidden;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+
+  .front {
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .front img {
+    border-radius: 15px;
+    height: 100%;
+  }
+
+  .back {
+    background-color: white;
+    transform: rotateY(180deg);
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .completedIconDis {
+    position: absolute;
+    color: white;
+    transition: 0.5s;
+    font-size: 0px;
+    top: 0;
+    border-radius: 50%;
+    right: 0px;
+  }
+
+  .completedIcon {
+    position: absolute;
+    color: rgb(50, 133, 54, 1);
+    font-size: 40px;
+    top: 20px;
+    right: 10px;
+  }
+}
+
+.rotate {
+  .front {
+    transform: rotateY(180deg);
+  }
+  .back {
+    transform: rotateY(360deg);
+  }
+
+  .rotateAnswer {
+    transition: 0.8s;
+    transform: rotateY(180deg);
+  }
+}
+
+.slaider {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+}
+
+.homeCard .front,
+.homeCard .back {
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.26);
+  text-align: left;
+}
+
+.word {
+  text-align: center;
+  color: $primary-color;
+}
+
+@media (max-width: 799px) {
+  .card {
+    max-width: 420px;
+    width: 100%;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 430px) {
+  .card {
+    min-height: calc(100vw - 20px);
+    h4 {
+      margin: 5px;
+      font-size: 22px;
+    }
+
+    button {
+      padding: 0px;
+    }
+
+    input {
+      font-size: 18px;
+    }
+  }
+
+  .back div {
+    font-size: 14px !important;
+  }
+}

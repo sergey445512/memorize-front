@@ -1,0 +1,20 @@
+@import "../../index.module.scss";
+
+.footer {
+  display: flex;
+  padding: 18px 10px;
+  background: $white-color;
+  font-size: 18px;
+  border-top: 1px solid #00000036;
+
+  .footerContainer {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 372px) {
+  .footer {
+    font-size: 0.9rem;
+  }
+}

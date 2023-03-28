@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  padding: 15px 0 10px;
+}
+
+@media (max-width: 860px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .buttonsRepeat {
+      flex-direction: column;
+      margin: 0;
+      gap: 10px;
+    }
+  }
+}

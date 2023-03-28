@@ -1,0 +1,71 @@
+@import "../../index.module.scss";
+
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 40px;
+  right: 0;
+  bottom: 0px;
+  background: $light-blue-color;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  .swiper {
+    max-width: 900px;
+    width: 100%;
+    padding: 50px !important;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .card {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sliderWrapper {
+    top: 0px;
+    margin: 0;
+    width: 100%;
+
+    .swiper {
+      padding: 40px 10px !important;
+      margin: 0;
+
+      .card {
+        max-width: 400px;
+        width: 100%;
+        max-height: 400px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .sliderWrapper {
+    margin: 0;
+    width: 100%;
+
+    .swiper {
+      padding: 40px 10px !important;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .sliderWrapper {
+    .swiper {
+      .card {
+        max-height: calc(100vw - 20px);
+      }
+    }
+  }
+}

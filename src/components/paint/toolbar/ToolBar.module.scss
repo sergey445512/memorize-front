@@ -1,0 +1,105 @@
+@import "../../../index.module.scss";
+
+.toolbar {
+  background: $white-color;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.25);
+  gap: 30px;
+  color: #5a6168;
+  font-size: 20px;
+
+  .arrows {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  .colorInput {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid $primary-color;
+  }
+
+  .line {
+    font-size: 20px;
+    margin-left: -2px;
+
+    transform: scale(1.2);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    li > span {
+      margin-left: 10px;
+    }
+  }
+
+  li {
+    cursor: pointer;
+    display: flex;
+  }
+  &__btn {
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  input {
+    min-height: 30px;
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: "850px") {
+  .toolbar {
+    flex-direction: column;
+    width: 100%;
+    max-height: 300px;
+    align-items: center;
+    flex-wrap: wrap;
+    &__btn {
+      height: 24px;
+      width: 24px;
+    }
+
+    ul > li > span {
+      display: none;
+    }
+
+    .slider {
+      max-width: 50px;
+    }
+    p {
+      display: none;
+    }
+
+    ul {
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .buttons {
+      width: auto;
+    }
+    input {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+}

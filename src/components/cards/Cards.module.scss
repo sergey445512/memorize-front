@@ -1,0 +1,24 @@
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-flow: wrap;
+  align-items: start;
+  justify-content: center;
+  padding-bottom: 10px;
+  min-height: calc(100vh - 180px);
+  width: 100%;
+
+  .skeleton {
+    max-width: 380px;
+    height: 380px;
+    width: 100%;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 590px) {
+  .cards {
+    align-items: center;
+    justify-content: center;
+  }
+}

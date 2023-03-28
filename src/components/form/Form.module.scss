@@ -1,0 +1,28 @@
+@import "../../index.module.scss";
+
+.formContainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 6px 13px 31px 8px rgba(0, 0, 0, 0.2);
+  gap: 30px;
+  text-align: center;
+  h1 {
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    a {
+      color: $primary-color;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
